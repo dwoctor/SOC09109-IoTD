@@ -1,15 +1,15 @@
-package SOC09109-IoTD
+package SOC09109IoTD
 
 import (
-    "fmt"
-    "net"
+	"fmt"
+	"net"
 	"encoding/json"
 )
 
 const (
-    CONN_HOST = "localhost"
-    CONN_PORT = "1000"
-    CONN_TYPE = "tcp"
+	CONN_HOST = "localhost"
+	CONN_PORT = "1000"
+	CONN_TYPE = "tcp"
 )
 
 type WifiDevice struct {
@@ -20,22 +20,22 @@ type WifiDevice struct {
 }
 
 func main() {
-    // Listen for incoming connections.
-    l, err := net.Listen(CONN_TYPE, CONN_HOST + ":" + CONN_PORT)
-    if err != nil {
-    	panic(err)
-    }
-    // Close the listener when the application closes.
-    defer l.Close()
-    for {
-        // Listen for an incoming connection.
-        conn, err := l.Accept()
-        if err != nil {
-        	panic(err)
-        }
-        // Handle connections in a new goroutine.
-        go handleRequest(conn)
-    }
+	// Listen for incoming connections.
+	l, err := net.Listen(CONN_TYPE, CONN_HOST + ":" + CONN_PORT)
+	if err != nil {
+		panic(err)
+	}
+	// Close the listener when the application closes.
+	defer l.Close()
+	for {
+		// Listen for an incoming connection.
+		conn, err := l.Accept()
+		if err != nil {
+			panic(err)
+	        }
+		// Handle connections in a new goroutine.
+		go handleRequest(conn)
+	}
 }
 
 // Handles incoming requests.

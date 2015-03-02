@@ -1,4 +1,4 @@
-package SOC09109IoTD
+package main
 
 import (
 	"errors"

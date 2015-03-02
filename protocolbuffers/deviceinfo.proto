@@ -1,0 +1,10 @@
+message DeviceInfo {
+  enum DeviceType {
+    BLUETOOTH = 0;
+    WIFI = 1;
+  }
+  required string name = 1;
+  required DeviceType type = 2;
+  optional string ip = 3;
+  optional string mac = 4;
+}

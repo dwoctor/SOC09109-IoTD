@@ -3,16 +3,13 @@ __author__ = 'David'
 import socketserver
 import threading
 import json
+from ThreadedTCPServer import ThreadedTCPServer
 
 
-class ThreadedTCPRequestHandler(socketserver.BaseRequestHandler):
+class ThreadedHandshakeTCPRequestHandler(socketserver.BaseRequestHandler):
     def handle(self):
         self.request.recv(1024)
-        self.request.sendall(bytes(json.dumps({'name': 'pi', 'type': 'WiFi'}), 'utf-8'))
-
-
-class ThreadedTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
-    pass
+        self.request.sendall(bytes(json.dumps({'name': 'pi', 'type': 'wifi'}), 'utf-8'))
 
 
 class ThreadedHandshake():
@@ -20,7 +17,7 @@ class ThreadedHandshake():
     def __start(daemon):
         host, port = "localhost", 9999
 
-        server = ThreadedTCPServer((host, port), ThreadedTCPRequestHandler)
+        server = ThreadedTCPServer((host, port), ThreadedHandshakeTCPRequestHandler)
         ip, port = server.server_address
 
         # Start a thread with the server -- that thread will then start one

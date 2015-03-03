@@ -3,9 +3,9 @@ __author__ = 'David'
 import socketserver
 import threading
 from protocolbuffers import deviceinfo_pb2
+from ThreadedTCPServer import ThreadedTCPServer
 
-
-class ThreadedProtobufTCPRequestHandler(socketserver.BaseRequestHandler):
+class ThreadedProtobufHandshakeTCPRequestHandler(socketserver.BaseRequestHandler):
     def handle(self):
         self.request.recv(1024)
         data = deviceinfo_pb2.DeviceInfo()
@@ -14,16 +14,12 @@ class ThreadedProtobufTCPRequestHandler(socketserver.BaseRequestHandler):
         self.request.sendall(data)
 
 
-class ThreadedTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
-    pass
-
-
 class ThreadedProtobufHandshake():
     @staticmethod
     def __start(daemon):
         host, port = "localhost", 9999
 
-        server = ThreadedTCPServer((host, port), ThreadedProtobufTCPRequestHandler)
+        server = ThreadedTCPServer((host, port), ThreadedProtobufHandshakeTCPRequestHandler)
         ip, port = server.server_address
 
         # Start a thread with the server -- that thread will then start one

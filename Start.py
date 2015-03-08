@@ -1,7 +1,7 @@
 __author__ = 'David'
 
-import ThreadedController
-import ThreadedHandshake
+from ThreadedController import ThreadedController
+from ThreadedHandshake import ThreadedHandshake
 
 ThreadedController.start()
 ThreadedHandshake.start()

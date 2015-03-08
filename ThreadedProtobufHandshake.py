@@ -3,9 +3,9 @@ __author__ = 'David'
 import socketserver
 import threading
 
-from protocolbuffers import deviceinfo_pb2
-import ThreadedTCPServer
 import IpAddress
+from protocolbuffers import deviceinfo_pb2
+from ThreadedTCPServer import ThreadedTCPServer
 
 
 class ThreadedProtobufHandshakeTCPRequestHandler(socketserver.BaseRequestHandler):

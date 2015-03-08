@@ -3,7 +3,7 @@ __author__ = 'David'
 import socketserver
 import threading
 import json
-from ThreadedTCPServer import ThreadedTCPServer
+import ThreadedTCPServer
 
 
 class ThreadedHandshakeTCPRequestHandler(socketserver.BaseRequestHandler):
@@ -16,18 +16,16 @@ class ThreadedHandshake():
     @staticmethod
     def __start(daemon):
         host, port = "localhost", 9999
-
         server = ThreadedTCPServer((host, port), ThreadedHandshakeTCPRequestHandler)
         ip, port = server.server_address
-
         # Start a thread with the server -- that thread will then start one
         # more thread for each request
         server_thread = threading.Thread(target=server.serve_forever)
         # Exit the server thread when the main thread terminates
         server_thread.daemon = daemon
         server_thread.start()
+        print('Handshake running.')
 
-        print('Server loop running in thread:', server_thread.name)
 
     @staticmethod
     def start():

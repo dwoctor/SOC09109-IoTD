@@ -1,6 +1,7 @@
 __author__ = 'David'
 
 import json
+
 try:
     import RPi.GPIO as GPIO
 except RuntimeError:

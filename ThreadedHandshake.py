@@ -1,8 +1,10 @@
 __author__ = 'David'
 
+import json
 import socketserver
 import threading
-import json
+
+import IpAddress
 import ThreadedTCPServer
 
 
@@ -15,7 +17,7 @@ class ThreadedHandshakeTCPRequestHandler(socketserver.BaseRequestHandler):
 class ThreadedHandshake():
     @staticmethod
     def __start(daemon):
-        host, port = "localhost", 9999
+        host, port = IpAddress.get_lan_ip(), 1111
         server = ThreadedTCPServer((host, port), ThreadedHandshakeTCPRequestHandler)
         ip, port = server.server_address
         # Start a thread with the server -- that thread will then start one
@@ -35,5 +37,6 @@ class ThreadedHandshake():
     def start_in_daemon_mode():
         ThreadedHandshake.__start(True)
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     ThreadedHandshake.start()

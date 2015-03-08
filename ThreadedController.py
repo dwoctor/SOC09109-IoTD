@@ -2,8 +2,10 @@ __author__ = 'David'
 
 import socketserver
 import threading
-import ThreadedTCPServer
+
 import GpioCommand
+import IpAddress
+import ThreadedTCPServer
 
 
 class ThreadedControllerTCPRequestHandler(socketserver.BaseRequestHandler):
@@ -14,7 +16,7 @@ class ThreadedControllerTCPRequestHandler(socketserver.BaseRequestHandler):
 class ThreadedController():
     @staticmethod
     def __start(daemon):
-        host, port = "localhost", 9999
+        host, port = IpAddress.get_lan_ip(), 2222
         server = ThreadedTCPServer((host, port), ThreadedControllerTCPRequestHandler)
         ip, port = server.server_address
         # Start a thread with the server -- that thread will then start one
@@ -33,5 +35,6 @@ class ThreadedController():
     def start_in_daemon_mode():
         ThreadedController.__start(True)
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     ThreadedController.start()

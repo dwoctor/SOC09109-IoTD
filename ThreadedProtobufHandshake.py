@@ -2,8 +2,11 @@ __author__ = 'David'
 
 import socketserver
 import threading
+
 from protocolbuffers import deviceinfo_pb2
-from ThreadedTCPServer import ThreadedTCPServer
+import ThreadedTCPServer
+import IpAddress
+
 
 class ThreadedProtobufHandshakeTCPRequestHandler(socketserver.BaseRequestHandler):
     def handle(self):
@@ -17,7 +20,7 @@ class ThreadedProtobufHandshakeTCPRequestHandler(socketserver.BaseRequestHandler
 class ThreadedProtobufHandshake():
     @staticmethod
     def __start(daemon):
-        host, port = "localhost", 9999
+        host, port = IpAddress.get_lan_ip(), 1111
 
         server = ThreadedTCPServer((host, port), ThreadedProtobufHandshakeTCPRequestHandler)
         ip, port = server.server_address
@@ -39,5 +42,6 @@ class ThreadedProtobufHandshake():
     def start_in_daemon_mode():
         ThreadedProtobufHandshake.__start(True)
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     ThreadedProtobufHandshake.start()

@@ -5,7 +5,7 @@ import threading
 
 import GpioCommand
 import IpAddress
-import ThreadedTCPServer
+from ThreadedTCPServer import ThreadedTCPServer
 
 
 class ThreadedControllerTCPRequestHandler(socketserver.BaseRequestHandler):

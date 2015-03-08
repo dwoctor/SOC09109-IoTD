@@ -5,7 +5,7 @@ import socketserver
 import threading
 
 import IpAddress
-import ThreadedTCPServer
+from ThreadedTCPServer import ThreadedTCPServer
 
 
 class ThreadedHandshakeTCPRequestHandler(socketserver.BaseRequestHandler):

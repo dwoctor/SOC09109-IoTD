@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74f2dfb0-d274-4056-b278-da158141371a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GpioCommand.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ThreadedController.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThreadedHandshake.py" afterPath="$PROJECT_DIR$/ThreadedHandshake.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThreadedProtobufHandshake.py" afterPath="$PROJECT_DIR$/ThreadedProtobufHandshake.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThreadedTCPServer.py" afterPath="$PROJECT_DIR$/ThreadedTCPServer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handshake.go" afterPath="$PROJECT_DIR$/handshake.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="74f2dfb0-d274-4056-b278-da158141371a" name="Default" comment="" />
     <ignored path="SOC09109-IoTD.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,70 +23,7 @@
     <favorites_list name="SOC09109-IoTD" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="GpioCommand.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GpioCommand.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Start.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Start.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadedController.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ThreadedController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.813783" vertical-offset="0" max-vertical-offset="682">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <element signature="e#22#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadedHandshake.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreadedHandshake.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadedProtobufHandshake.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreadedProtobufHandshake.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadedTCPServer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreadedTCPServer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -494,7 +422,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="800" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -614,7 +542,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThreadedHandshake.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+        <state vertical-scroll-proportion="0.7917889" vertical-offset="0" max-vertical-offset="682">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
@@ -622,7 +550,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThreadedProtobufHandshake.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+        <state vertical-scroll-proportion="0.8797654" vertical-offset="0" max-vertical-offset="690">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
@@ -638,7 +566,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThreadedTCPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+        <state vertical-scroll-proportion="0.15395895" vertical-offset="0" max-vertical-offset="682">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
@@ -646,8 +574,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThreadedController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.813783" vertical-offset="0" max-vertical-offset="682">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7038123" vertical-offset="0" max-vertical-offset="682">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
           <folding>
             <element signature="e#22#41#0" expanded="true" />
           </folding>

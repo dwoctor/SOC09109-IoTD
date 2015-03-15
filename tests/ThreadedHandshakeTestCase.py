@@ -2,11 +2,11 @@ __author__ = 'David'
 
 import unittest
 import socket
+
 from ThreadedHandshake import ThreadedHandshake
 
 
 class ThreadedHandshakeTestCase(unittest.TestCase):
-
     def testPiHandshake(self):
         ThreadedHandshake.start_in_daemon_mode()
         host, port = 'localhost', 1111
@@ -24,6 +24,7 @@ class ThreadedHandshakeTestCase(unittest.TestCase):
             sock.close()
         print('Received: {}'.format(received))
         self.assertEqual({'name': 'pi', 'type': 'wifi', 'capability': 'gpio'}, received)
+
 
 if __name__ == '__main__':
     unittest.main()

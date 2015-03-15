@@ -10,10 +10,10 @@ from ThreadedTCPServer import ThreadedTCPServer
 
 class ThreadedProtobufHandshakeTCPRequestHandler(socketserver.BaseRequestHandler):
     def handle(self):
-        self.request.recv(1024)
         data = deviceinfo_pb2.DeviceInfo()
         data.name = 'pi'
         data.type = deviceinfo_pb2.DeviceInfo.WIFI
+        data.ability = deviceinfo_pb2.DeviceInfo.GPIO
         self.request.sendall(data)
 
 

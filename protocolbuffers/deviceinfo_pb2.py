@@ -18,7 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='deviceinfo.proto',
   package='',
-  serialized_pb=_b('\n\x10\x64\x65viceinfo.proto\"\x80\x01\n\nDeviceInfo\x12\x0c\n\x04name\x18\x01 \x02(\t\x12$\n\x04type\x18\x02 \x02(\x0e\x32\x16.DeviceInfo.DeviceType\x12\n\n\x02ip\x18\x03 \x01(\t\x12\x0b\n\x03mac\x18\x04 \x01(\t\"%\n\nDeviceType\x12\r\n\tBLUETOOTH\x10\x00\x12\x08\n\x04WIFI\x10\x01')
+  serialized_pb=_b('\n\x10\x64\x65viceinfo.proto\"\xc7\x01\n\nDeviceInfo\x12\x0c\n\x04name\x18\x01 \x02(\t\x12$\n\x04type\x18\x02 \x02(\x0e\x32\x16.DeviceInfo.DeviceType\x12*\n\x07\x61\x62ility\x18\x03 \x02(\x0e\x32\x19.DeviceInfo.DeviceAbility\x12\n\n\x02ip\x18\x04 \x01(\t\x12\x0b\n\x03mac\x18\x05 \x01(\t\"%\n\nDeviceType\x12\r\n\tBLUETOOTH\x10\x00\x12\x08\n\x04WIFI\x10\x01\"\x19\n\rDeviceAbility\x12\x08\n\x04GPIO\x10\x00')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -41,10 +41,28 @@ _DEVICEINFO_DEVICETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=112,
-  serialized_end=149,
+  serialized_start=156,
+  serialized_end=193,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICEINFO_DEVICETYPE)
+
+_DEVICEINFO_DEVICEABILITY = _descriptor.EnumDescriptor(
+  name='DeviceAbility',
+  full_name='DeviceInfo.DeviceAbility',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='GPIO', index=0, number=0,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=195,
+  serialized_end=220,
+)
+_sym_db.RegisterEnumDescriptor(_DEVICEINFO_DEVICEABILITY)
 
 
 _DEVICEINFO = _descriptor.Descriptor(
@@ -69,15 +87,22 @@ _DEVICEINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ip', full_name='DeviceInfo.ip', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      name='ability', full_name='DeviceInfo.ability', index=2,
+      number=3, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ip', full_name='DeviceInfo.ip', index=3,
+      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='mac', full_name='DeviceInfo.mac', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='mac', full_name='DeviceInfo.mac', index=4,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -88,6 +113,7 @@ _DEVICEINFO = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
     _DEVICEINFO_DEVICETYPE,
+    _DEVICEINFO_DEVICEABILITY,
   ],
   options=None,
   is_extendable=False,
@@ -95,11 +121,13 @@ _DEVICEINFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=21,
-  serialized_end=149,
+  serialized_end=220,
 )
 
 _DEVICEINFO.fields_by_name['type'].enum_type = _DEVICEINFO_DEVICETYPE
+_DEVICEINFO.fields_by_name['ability'].enum_type = _DEVICEINFO_DEVICEABILITY
 _DEVICEINFO_DEVICETYPE.containing_type = _DEVICEINFO
+_DEVICEINFO_DEVICEABILITY.containing_type = _DEVICEINFO
 DESCRIPTOR.message_types_by_name['DeviceInfo'] = _DEVICEINFO
 
 DeviceInfo = _reflection.GeneratedProtocolMessageType('DeviceInfo', (_message.Message,), dict(

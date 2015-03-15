@@ -34,29 +34,38 @@ public final class Deviceinfo {
     Deviceinfo.DeviceInfo.DeviceType getType();
 
     /**
-     * <code>optional string ip = 3;</code>
+     * <code>required .DeviceInfo.DeviceAbility ability = 3;</code>
+     */
+    boolean hasAbility();
+    /**
+     * <code>required .DeviceInfo.DeviceAbility ability = 3;</code>
+     */
+    Deviceinfo.DeviceInfo.DeviceAbility getAbility();
+
+    /**
+     * <code>optional string ip = 4;</code>
      */
     boolean hasIp();
     /**
-     * <code>optional string ip = 3;</code>
+     * <code>optional string ip = 4;</code>
      */
     java.lang.String getIp();
     /**
-     * <code>optional string ip = 3;</code>
+     * <code>optional string ip = 4;</code>
      */
     com.google.protobuf.ByteString
         getIpBytes();
 
     /**
-     * <code>optional string mac = 4;</code>
+     * <code>optional string mac = 5;</code>
      */
     boolean hasMac();
     /**
-     * <code>optional string mac = 4;</code>
+     * <code>optional string mac = 5;</code>
      */
     java.lang.String getMac();
     /**
-     * <code>optional string mac = 4;</code>
+     * <code>optional string mac = 5;</code>
      */
     com.google.protobuf.ByteString
         getMacBytes();
@@ -130,15 +139,26 @@ public final class Deviceinfo {
               }
               break;
             }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              ip_ = bs;
+            case 24: {
+              int rawValue = input.readEnum();
+              Deviceinfo.DeviceInfo.DeviceAbility value = Deviceinfo.DeviceInfo.DeviceAbility.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                ability_ = value;
+              }
               break;
             }
             case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
+              ip_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
               mac_ = bs;
               break;
             }
@@ -263,6 +283,79 @@ public final class Deviceinfo {
       // @@protoc_insertion_point(enum_scope:DeviceInfo.DeviceType)
     }
 
+    /**
+     * Protobuf enum {@code DeviceInfo.DeviceAbility}
+     */
+    public enum DeviceAbility
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>GPIO = 0;</code>
+       */
+      GPIO(0, 0),
+      ;
+
+      /**
+       * <code>GPIO = 0;</code>
+       */
+      public static final int GPIO_VALUE = 0;
+
+
+      public final int getNumber() { return value; }
+
+      public static DeviceAbility valueOf(int value) {
+        switch (value) {
+          case 0: return GPIO;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<DeviceAbility>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<DeviceAbility>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<DeviceAbility>() {
+              public DeviceAbility findValueByNumber(int number) {
+                return DeviceAbility.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return Deviceinfo.DeviceInfo.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final DeviceAbility[] VALUES = values();
+
+      public static DeviceAbility valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private DeviceAbility(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:DeviceInfo.DeviceAbility)
+    }
+
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.Object name_;
@@ -321,16 +414,31 @@ public final class Deviceinfo {
       return type_;
     }
 
-    public static final int IP_FIELD_NUMBER = 3;
-    private java.lang.Object ip_;
+    public static final int ABILITY_FIELD_NUMBER = 3;
+    private Deviceinfo.DeviceInfo.DeviceAbility ability_;
     /**
-     * <code>optional string ip = 3;</code>
+     * <code>required .DeviceInfo.DeviceAbility ability = 3;</code>
      */
-    public boolean hasIp() {
+    public boolean hasAbility() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional string ip = 3;</code>
+     * <code>required .DeviceInfo.DeviceAbility ability = 3;</code>
+     */
+    public Deviceinfo.DeviceInfo.DeviceAbility getAbility() {
+      return ability_;
+    }
+
+    public static final int IP_FIELD_NUMBER = 4;
+    private java.lang.Object ip_;
+    /**
+     * <code>optional string ip = 4;</code>
+     */
+    public boolean hasIp() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string ip = 4;</code>
      */
     public java.lang.String getIp() {
       java.lang.Object ref = ip_;
@@ -347,7 +455,7 @@ public final class Deviceinfo {
       }
     }
     /**
-     * <code>optional string ip = 3;</code>
+     * <code>optional string ip = 4;</code>
      */
     public com.google.protobuf.ByteString
         getIpBytes() {
@@ -363,16 +471,16 @@ public final class Deviceinfo {
       }
     }
 
-    public static final int MAC_FIELD_NUMBER = 4;
+    public static final int MAC_FIELD_NUMBER = 5;
     private java.lang.Object mac_;
     /**
-     * <code>optional string mac = 4;</code>
+     * <code>optional string mac = 5;</code>
      */
     public boolean hasMac() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional string mac = 4;</code>
+     * <code>optional string mac = 5;</code>
      */
     public java.lang.String getMac() {
       java.lang.Object ref = mac_;
@@ -389,7 +497,7 @@ public final class Deviceinfo {
       }
     }
     /**
-     * <code>optional string mac = 4;</code>
+     * <code>optional string mac = 5;</code>
      */
     public com.google.protobuf.ByteString
         getMacBytes() {
@@ -408,6 +516,7 @@ public final class Deviceinfo {
     private void initFields() {
       name_ = "";
       type_ = Deviceinfo.DeviceInfo.DeviceType.BLUETOOTH;
+      ability_ = Deviceinfo.DeviceInfo.DeviceAbility.GPIO;
       ip_ = "";
       mac_ = "";
     }
@@ -425,6 +534,10 @@ public final class Deviceinfo {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!hasAbility()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -439,10 +552,13 @@ public final class Deviceinfo {
         output.writeEnum(2, type_.getNumber());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getIpBytes());
+        output.writeEnum(3, ability_.getNumber());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(4, getMacBytes());
+        output.writeBytes(4, getIpBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getMacBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -463,11 +579,15 @@ public final class Deviceinfo {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getIpBytes());
+          .computeEnumSize(3, ability_.getNumber());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getMacBytes());
+          .computeBytesSize(4, getIpBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getMacBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -590,10 +710,12 @@ public final class Deviceinfo {
         bitField0_ = (bitField0_ & ~0x00000001);
         type_ = Deviceinfo.DeviceInfo.DeviceType.BLUETOOTH;
         bitField0_ = (bitField0_ & ~0x00000002);
-        ip_ = "";
+        ability_ = Deviceinfo.DeviceInfo.DeviceAbility.GPIO;
         bitField0_ = (bitField0_ & ~0x00000004);
-        mac_ = "";
+        ip_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
+        mac_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -633,9 +755,13 @@ public final class Deviceinfo {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.ip_ = ip_;
+        result.ability_ = ability_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
+        }
+        result.ip_ = ip_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
         }
         result.mac_ = mac_;
         result.bitField0_ = to_bitField0_;
@@ -662,13 +788,16 @@ public final class Deviceinfo {
         if (other.hasType()) {
           setType(other.getType());
         }
+        if (other.hasAbility()) {
+          setAbility(other.getAbility());
+        }
         if (other.hasIp()) {
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           ip_ = other.ip_;
           onChanged();
         }
         if (other.hasMac()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
           mac_ = other.mac_;
           onChanged();
         }
@@ -682,6 +811,10 @@ public final class Deviceinfo {
           return false;
         }
         if (!hasType()) {
+          
+          return false;
+        }
+        if (!hasAbility()) {
           
           return false;
         }
@@ -818,15 +951,50 @@ public final class Deviceinfo {
         return this;
       }
 
-      private java.lang.Object ip_ = "";
+      private Deviceinfo.DeviceInfo.DeviceAbility ability_ = Deviceinfo.DeviceInfo.DeviceAbility.GPIO;
       /**
-       * <code>optional string ip = 3;</code>
+       * <code>required .DeviceInfo.DeviceAbility ability = 3;</code>
        */
-      public boolean hasIp() {
+      public boolean hasAbility() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional string ip = 3;</code>
+       * <code>required .DeviceInfo.DeviceAbility ability = 3;</code>
+       */
+      public Deviceinfo.DeviceInfo.DeviceAbility getAbility() {
+        return ability_;
+      }
+      /**
+       * <code>required .DeviceInfo.DeviceAbility ability = 3;</code>
+       */
+      public Builder setAbility(Deviceinfo.DeviceInfo.DeviceAbility value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        ability_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .DeviceInfo.DeviceAbility ability = 3;</code>
+       */
+      public Builder clearAbility() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        ability_ = Deviceinfo.DeviceInfo.DeviceAbility.GPIO;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ip_ = "";
+      /**
+       * <code>optional string ip = 4;</code>
+       */
+      public boolean hasIp() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string ip = 4;</code>
        */
       public java.lang.String getIp() {
         java.lang.Object ref = ip_;
@@ -843,7 +1011,7 @@ public final class Deviceinfo {
         }
       }
       /**
-       * <code>optional string ip = 3;</code>
+       * <code>optional string ip = 4;</code>
        */
       public com.google.protobuf.ByteString
           getIpBytes() {
@@ -859,36 +1027,36 @@ public final class Deviceinfo {
         }
       }
       /**
-       * <code>optional string ip = 3;</code>
+       * <code>optional string ip = 4;</code>
        */
       public Builder setIp(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000008;
         ip_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string ip = 3;</code>
+       * <code>optional string ip = 4;</code>
        */
       public Builder clearIp() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         ip_ = getDefaultInstance().getIp();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string ip = 3;</code>
+       * <code>optional string ip = 4;</code>
        */
       public Builder setIpBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000008;
         ip_ = value;
         onChanged();
         return this;
@@ -896,13 +1064,13 @@ public final class Deviceinfo {
 
       private java.lang.Object mac_ = "";
       /**
-       * <code>optional string mac = 4;</code>
+       * <code>optional string mac = 5;</code>
        */
       public boolean hasMac() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional string mac = 4;</code>
+       * <code>optional string mac = 5;</code>
        */
       public java.lang.String getMac() {
         java.lang.Object ref = mac_;
@@ -919,7 +1087,7 @@ public final class Deviceinfo {
         }
       }
       /**
-       * <code>optional string mac = 4;</code>
+       * <code>optional string mac = 5;</code>
        */
       public com.google.protobuf.ByteString
           getMacBytes() {
@@ -935,36 +1103,36 @@ public final class Deviceinfo {
         }
       }
       /**
-       * <code>optional string mac = 4;</code>
+       * <code>optional string mac = 5;</code>
        */
       public Builder setMac(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000010;
         mac_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string mac = 4;</code>
+       * <code>optional string mac = 5;</code>
        */
       public Builder clearMac() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         mac_ = getDefaultInstance().getMac();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string mac = 4;</code>
+       * <code>optional string mac = 5;</code>
        */
       public Builder setMacBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000010;
         mac_ = value;
         onChanged();
         return this;
@@ -995,10 +1163,12 @@ public final class Deviceinfo {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020deviceinfo.proto\"\200\001\n\nDeviceInfo\022\014\n\004nam" +
+      "\n\020deviceinfo.proto\"\307\001\n\nDeviceInfo\022\014\n\004nam" +
       "e\030\001 \002(\t\022$\n\004type\030\002 \002(\0162\026.DeviceInfo.Devic" +
-      "eType\022\n\n\002ip\030\003 \001(\t\022\013\n\003mac\030\004 \001(\t\"%\n\nDevice" +
-      "Type\022\r\n\tBLUETOOTH\020\000\022\010\n\004WIFI\020\001"
+      "eType\022*\n\007ability\030\003 \002(\0162\031.DeviceInfo.Devi" +
+      "ceAbility\022\n\n\002ip\030\004 \001(\t\022\013\n\003mac\030\005 \001(\t\"%\n\nDe" +
+      "viceType\022\r\n\tBLUETOOTH\020\000\022\010\n\004WIFI\020\001\"\031\n\rDev" +
+      "iceAbility\022\010\n\004GPIO\020\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1017,7 +1187,7 @@ public final class Deviceinfo {
     internal_static_DeviceInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_DeviceInfo_descriptor,
-        new java.lang.String[] { "Name", "Type", "Ip", "Mac", });
+        new java.lang.String[] { "Name", "Type", "Ability", "Ip", "Mac", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -3,8 +3,12 @@ message DeviceInfo {
     BLUETOOTH = 0;
     WIFI = 1;
   }
+  enum DeviceAbility {
+    GPIO = 0;
+  }
   required string name = 1;
   required DeviceType type = 2;
-  optional string ip = 3;
-  optional string mac = 4;
+  required DeviceAbility ability = 3;
+  optional string ip = 4;
+  optional string mac = 5;
 }

@@ -18,7 +18,6 @@ class ThreadedHandshake():
     def __start(daemon):
         host, port = IpAddress.get_lan_ip(), 1111
         server = ThreadedTCPServer((host, port), ThreadedHandshakeTCPRequestHandler)
-        ip, port = server.server_address
         # Start a thread with the server -- that thread will then start one
         # more thread for each request
         server_thread = threading.Thread(target=server.serve_forever)

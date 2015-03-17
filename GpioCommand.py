@@ -22,3 +22,6 @@ class GpioCommand(object):
         GPIO.output(self.pin, self.state)
         # print('PIN %s is %s' % (self.pin, 'ON' if self.state else 'OFF'))
         # print('PIN {} is {}'.format(self.__dict__['pin'], 'ON' if self.__dict__['state'] else 'OFF'))
+
+    def jsonize(self):
+        return json.dumps(self.__dict__)

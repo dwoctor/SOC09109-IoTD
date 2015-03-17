@@ -10,7 +10,7 @@ from ThreadedTCPServer import ThreadedTCPServer
 
 class ThreadedStateTCPRequestHandler(socketserver.BaseRequestHandler):
     def handle(self):
-        self.request.sendall(bytes(GpioState(self.request.recv(1024)).jsonize(), 'utf-8'))
+        self.request.sendall(bytes(GpioState(self.request.recv(1024).decode('utf-8').strip()).jsonize(), 'utf-8'))
 
 
 class ThreadedState():

@@ -10,7 +10,7 @@ from ThreadedTCPServer import ThreadedTCPServer
 
 class ThreadedControllerTCPRequestHandler(socketserver.BaseRequestHandler):
     def handle(self):
-        GpioCommand(self.request.recv(1024)).execute()
+        GpioCommand(self.request.recv(1024).decode('utf-8').strip()).execute()
 
 
 class ThreadedController():

@@ -18,7 +18,7 @@ class GpioState(object):
         GPIO.setwarning(False)
         # Using channel numbers of the Broadcom SOC
         GPIO.setmode(GPIO.BCM)
-        # pin is an output
+        # get pin state
         GPIO.setup(self.pin, GPIO.IN)
         self.__dict__['state'] = GPIO.input(self.pin)
         # print('PIN %s is %s' % (self.pin, 'ON' if self.state else 'OFF'))

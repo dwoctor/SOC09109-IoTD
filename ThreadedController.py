@@ -3,7 +3,7 @@ __author__ = 'David'
 import socketserver
 import threading
 
-import GpioCommand
+from GpioCommand import GpioCommand
 import IpAddress
 from ThreadedTCPServer import ThreadedTCPServer
 

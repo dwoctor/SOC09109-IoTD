@@ -10,7 +10,8 @@ from ThreadedTCPServer import ThreadedTCPServer
 
 class ThreadedHandshakeTCPRequestHandler(socketserver.BaseRequestHandler):
     def handle(self):
-        self.request.sendall(bytes(json.dumps({'name': 'pi', 'type': 'wifi', 'capability': 'gpio'}), 'utf-8'))
+        ip = IpAddress.get_lan_ip()
+        self.request.sendall(bytes(json.dumps({'name': 'pi', 'type': 'wifi', 'capability': 'gpio', 'ip': ip}), 'utf-8'))
 
 
 class ThreadedHandshake():

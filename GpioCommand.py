@@ -14,7 +14,7 @@ class GpioCommand(object):
 
     def execute(self):
         # disable warning when pin is used in another script
-        GPIO.setwarning(False)
+        # GPIO.setwarning(False)
         # Using channel numbers of the Broadcom SOC
         GPIO.setmode(GPIO.BCM)
         # set pin state

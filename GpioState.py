@@ -15,7 +15,7 @@ class GpioState(object):
 
     def __getstate(self):
         # disable warning when pin is used in another script
-        GPIO.setwarning(False)
+        # GPIO.setwarning(False)
         # Using channel numbers of the Broadcom SOC
         GPIO.setmode(GPIO.BCM)
         # get pin state

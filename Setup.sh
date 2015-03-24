@@ -8,3 +8,5 @@ cp /root/SOC09109-IoTD/netboot.sh /usr/local/bin/netboot.sh
 
 chmod 755 /etc/systemd/system/netboot.service
 chmod 755 /usr/local/bin/netboot.sh
+
+systemctl enable /etc/systemd/system/netboot.service

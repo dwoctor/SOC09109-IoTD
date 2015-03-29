@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74f2dfb0-d274-4056-b278-da158141371a" name="Default" comment="FixThreadedController.py">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protocolbuffers/Deviceinfo.java" afterPath="$PROJECT_DIR$/protocolbuffers/Deviceinfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SOC09109-IoTD.iml" afterPath="$PROJECT_DIR$/.idea/SOC09109-IoTD.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Setup.sh" afterPath="$PROJECT_DIR$/Setup.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Start.py" afterPath="$PROJECT_DIR$/Start.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/ThreadedControllerTestCase.py" afterPath="$PROJECT_DIR$/tests/ThreadedControllerTestCase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/ThreadedHandshakeTestCase.py" afterPath="$PROJECT_DIR$/tests/ThreadedHandshakeTestCase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThreadedProtobufHandshake.py" afterPath="$PROJECT_DIR$/ThreadedProtobufHandshake.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/ThreadedProtobufHandshakeTestCase.py" afterPath="$PROJECT_DIR$/tests/ThreadedProtobufHandshakeTestCase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protocolbuffers/deviceinfo.proto" afterPath="$PROJECT_DIR$/protocolbuffers/deviceinfo.proto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protocolbuffers/deviceinfo_pb2.py" afterPath="$PROJECT_DIR$/protocolbuffers/deviceinfo_pb2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/netboot.service" afterPath="$PROJECT_DIR$/netboot.service" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/netboot.sh" afterPath="$PROJECT_DIR$/netboot.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="74f2dfb0-d274-4056-b278-da158141371a" name="Default" comment="FixThreadedController.py" />
     <ignored path="SOC09109-IoTD.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,20 +23,7 @@
     <favorites_list name="SOC09109-IoTD" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ThreadedSwitchState.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ThreadedSwitchState.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3739003" vertical-offset="0" max-vertical-offset="682">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding>
-                <element signature="e#22#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -491,10 +458,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="800" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16420014" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16420014" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32627118" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />

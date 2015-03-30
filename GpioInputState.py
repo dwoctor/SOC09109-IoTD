@@ -11,9 +11,9 @@ except RuntimeError:
 class GpioInputState(object):
     def __init__(self, j):
         self.__dict__ = json.loads(j)
-        self.__getinput()
+        self.__getstate()
 
-    def __getinput(self):
+    def __getstate(self):
         # disable warning when pin is used in another script
         # GPIO.setwarning(False)
         # Using channel numbers of the Broadcom SOC

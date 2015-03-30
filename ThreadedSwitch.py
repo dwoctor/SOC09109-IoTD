@@ -4,8 +4,8 @@ import json
 import threading
 
 from GpioCommand import GpioCommand
-from GpioState import GpioState
-from GpioInput import GpioInput
+from GpioOutputState import GpioOutputState
+from GpioInputState import GpioInput
 
 
 class ThreadedSwitch():

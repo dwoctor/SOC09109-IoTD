@@ -3,10 +3,10 @@ __author__ = 'David'
 from ThreadedController import ThreadedController
 from ThreadedHandshake import ThreadedHandshake
 from ThreadedState import ThreadedState
-from ThreadedSwitchState import ThreadedSwitchState
+from ThreadedSwitch import ThreadedSwitch
 
 
 ThreadedController.start()
 ThreadedHandshake.start()
 ThreadedState.start()
-ThreadedSwitchState.start()
+ThreadedSwitch.start()

@@ -11,11 +11,11 @@ from GpioInputState import GpioInputState
 class ThreadedSwitch():
     @staticmethod
     def __start():
-        print('SwitchState running.')
+        print('Switch running.')
         while True:
             switch = GpioInputState(json.dumps({'pin': 22}))
-            if switch.state == 0:
-                while switch.state == 0:
+            if switch.state is False:
+                while switch.state is False:
                     switch = GpioInputState(json.dumps({'pin': 22}))
                 led = GpioOutputState(json.dumps({'pin': 17}))
                 GpioCommand(json.dumps({'pin': led.pin, 'state': not led.state})).execute()

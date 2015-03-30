@@ -7,7 +7,7 @@ from GpioCommand import GpioCommand
 from GpioState import GpioState
 
 
-class ThreadedSwitchState():
+class ThreadedSwitch():
     @staticmethod
     def __start():
         print('SwitchState running.')
@@ -21,8 +21,8 @@ class ThreadedSwitchState():
 
     @staticmethod
     def start():
-        threading.Thread(target=ThreadedSwitchState.__start()).start()
+        threading.Thread(target=ThreadedSwitch.__start()).start()
 
 
 if __name__ == '__main__':
-    ThreadedSwitchState.start()
+    ThreadedSwitch.start()

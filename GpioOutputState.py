@@ -8,7 +8,7 @@ except RuntimeError:
     print("Error importing RPi.GPIO! You need root privileges.")
 
 
-class GpioState(object):
+class GpioOutputState(object):
     def __init__(self, j):
         self.__dict__ = json.loads(j)
         self.__getstate()

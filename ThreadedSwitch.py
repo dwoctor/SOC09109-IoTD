@@ -17,7 +17,7 @@ class ThreadedSwitch():
             if switch.state == 0:
                 while switch.state == 0:
                     switch = GpioInput(json.dumps({'pin': 22}))
-                led = GpioState(json.dumps({'pin': 17}))
+                led = GpioOutputState(json.dumps({'pin': 17}))
                 GpioCommand(json.dumps({'pin': led.pin, 'state': not led.state})).execute()
 
     @staticmethod
